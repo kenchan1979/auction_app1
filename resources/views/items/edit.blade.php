@@ -26,7 +26,6 @@
     <!-- 更新先はitemsのidにしないと増える php artisan rote:listで確認① -->
     <form action="/items/{{ $item->id }}" method="post">
         @csrf
-        <!-- formタグはPUTやDELETEをサポートしていないため、@methodで指定する必要がある -->
         @method('PATCH')
         <p>
             <label for="name">商品名</label>
